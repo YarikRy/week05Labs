@@ -57,7 +57,7 @@ console.log(
  *
  * ↓ YOUR CODE HERE ↓ */
 // "On July 20th 1969, Niel Armstrong was the first person to set foot on the Earth's moon."
-
+console.log(`On July 20th ${person.year}, ${person.firstname} ${person.lastname} was the first person to set foot on the Earth's moon.`)
 /*-------------------------------------------------------*/
 // Question 2: Instance of a Class
 console.log(`--------------------------
@@ -85,7 +85,8 @@ greeting.hello()
  * Step 3: A greeting should print to the console
  *
  * ↓ YOUR CODE HERE ↓ */
-
+let myGreeting = new Greeting('Yarik', 'IL')
+myGreeting.hello()
 /*-------------------------------------------------------*/
 // Question 3: myBook
 console.log(`--------------------------
@@ -114,7 +115,12 @@ class Book {
  * Step 7: Invoke the describe method for the yourBook instance. Make it print to the console also.
  *
  * ↓ YOUR CODE HERE ↓ */
-
+let myBook = new Book('Pride and Prejudice', 'Jane Austen')
+console.log(myBook.title)
+console.log(myBook.author)
+console.log(myBook.describe())
+let yourBook = new Book('Harry Potter', 'J.K Rowling')
+console.log(yourBook.describe())
 /*-------------------------------------------------------*/
 // Question 4: Create a Class
 console.log(`--------------------------
@@ -129,7 +135,20 @@ Question 4: Create a Class \n`)
  *
  *
  * ↓ YOUR CODE HERE ↓ */
-
+class Fruit{
+  constructor(name, color, taste){
+    this.name = name
+    this.color = color
+    this.taste = taste
+  }
+  describe(){
+    console.log(`A ${this.name} is ${this.color} and has a ${this.taste} taste`)
+  }
+}
+let fruit1 = new Fruit('lime', 'green', 'sour')
+let fruit2 = new Fruit('banana', 'yellow', 'sweet')
+fruit1.describe()
+fruit2.describe()
 /*-------------------------------------------------------*/
 // Question 5: Inheritance and Polymorphism
 console.log(`--------------------------
